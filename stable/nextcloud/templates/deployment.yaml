@@ -108,19 +108,6 @@ spec:
         volumeMounts:
         - name: nextcloud-data
           mountPath: /var/www/html/
-          subPath: root
-        - name: nextcloud-data
-          mountPath: /var/www/html/data
-          subPath: data
-        - name: nextcloud-data
-          mountPath: /var/www/html/config
-          subPath: config
-        - name: nextcloud-data
-          mountPath: /var/www/html/custom_apps
-          subPath: custom_apps
-        - name: nextcloud-data
-          mountPath: /var/www/html/themes
-          subPath: themes
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
